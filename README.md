@@ -7,3 +7,8 @@ A linux-based virtual machine will be setup with the directory outlined in this 
 In the VM, the active user should be setup to have just enough privileges to complete the challenges. They shouldn't have excessive privileges to mitigate any "cheesing" of the challenges.
 
 Additionally, use tools like gocryptfs to encrypt the folder.
+
+## Solutions
+### Part 2
+The flag string is reversed in the jumbled text. 
+The reversed flag is `}nwod_edispu_nworf_taht_nrut{galf}`, leading to a solution flag of `flag{turn_that_frown_upside_down}`.
