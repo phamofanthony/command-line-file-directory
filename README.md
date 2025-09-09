@@ -12,3 +12,5 @@ Additionally, use tools like gocryptfs to encrypt the folder.
 ### Part 2
 The flag string is reversed in the jumbled text. 
 The reversed flag is `}nwod_edispu_nworf_taht_nrut{galf}`, leading to a solution flag of `flag{turn_that_frown_upside_down}`.
+
+## Part 4
