@@ -3,6 +3,8 @@
 ## VM Setup
 A linux-based virtual machine will be setup with the directory outlined in this Git repository. Each folder in this main directory corresponds to a different part or challenge in this series. Each folder will be encrypted with a password that's required to access the challenge contents. This password will be granted as each challenge is unlocked.
 
+The users will be run as user [USERID] with group [GROUPID]. 
+
 ## VM Considerations
 In the VM, the active user should be setup to have just enough privileges to complete the challenges. They shouldn't have excessive privileges to mitigate any "cheesing" of the challenges.
 
@@ -11,6 +13,18 @@ Additionally, use tools like gocryptfs to encrypt the folder.
 ## Solutions
 ### Part 2
 The flag string is reversed in the jumbled text. 
-The reversed flag is `}nwod_edispu_nworf_taht_nrut{galf}`, leading to a solution flag of `flag{turn_that_frown_upside_down}`.
+The reversed flag is `}nwod_edispu_nworf_taht_nrut{galf`, leading to a solution flag of `flag{turn_that_frown_upside_down}`.
 
-## Part 4
+### Part 4
+
+
+### Part 6
+Have a text file with a bunch of flags with varying repetition counts. This text file will include hundreds of flags, making a brute force attempt infeasible. Because of this, we need to figure out which one is the right one.
+
+There is a hidden markdown file in the directory that outlines a math problem. Solving the math problem results in `x=92`. This integer will correlate to the correct flag in the original text file that is repeated `x` times.
+
+To find the flag that is repeated `x` times, use the `sort` command to organize the text and `uniq` command with the count flag `-c` to count the number of repetitions, then analyzing that text to find only the one with the count of 92. Here is a sample solution:
+
+```
+sort secret_flag_in_here.txt | uniq -c | awk '$1 == 92 {print $2}'
+```
