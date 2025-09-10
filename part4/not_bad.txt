@@ -1,0 +1,3 @@
+Maybe you've got what it takes...
+
+flag{i_love_me_some_cup_rawrmen}
