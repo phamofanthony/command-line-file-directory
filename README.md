@@ -26,7 +26,7 @@ The reversed flag is `}nwod_edispu_nworf_taht_nrut{galf`, leading to a solution 
 ### Part 3 (Adel)
 
 ### Part 4 (Anthony)
-1. Have a .txt file saying "You're out of your reach, kiddo. Go home."
+1. Have a .txt file saying "You're out of your reach, kiddo. Go home.", and have the `not_bad.txt` file hidden to the specific `special_ctfplayer` user only
 2. Navigate to the home directory, which contains a setuid binary
 3. Use the setuid binary to run commands as the `special_ctfplayer` user
 4. With the binary, run `ls -a` in the challenge folder to show the previously hidden and privileged file
