@@ -16,6 +16,16 @@ sudo adduser ctfplayer (give it a password)
 sudo adduser special_ctfplayer
 ```
 
+## Folder Encryption Process
+Mkdir part1_encrypted part1_decrypted
+Gocryptfs -init part1_encrypted
+Gocryptfs part1_encrypted part1_decrypted
+Mv part1/* part1_decrypted/
+Fusermount -u part1_decrypted
+
+Unlock:
+Gocryptfs part1_encrypted part1_decrypted
+
 ## Solutions
 ### Part 1 (Adel)
 
