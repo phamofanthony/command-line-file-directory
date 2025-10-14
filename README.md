@@ -16,7 +16,12 @@ sudo adduser ctfplayer (give it a password)
 sudo adduser special_ctfplayer
 ```
 
+## Admin Credentials
+Username: vboxuser
+Password: VJUcc'321LRw
+
 ## Folder Encryption Process
+sudo apt install gocryptfs
 Mkdir part1_encrypted part1_decrypted
 Gocryptfs -init part1_encrypted
 Gocryptfs part1_encrypted part1_decrypted
